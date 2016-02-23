@@ -1,7 +1,8 @@
-class GoalsController < ApplicationController
+class GoalController < ApplicationController
   def index
   end
 
   def individual
   end
+
 end
