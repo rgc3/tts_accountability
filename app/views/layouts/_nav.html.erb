@@ -1,4 +1,4 @@
-<% if user_signed_in? %>
+
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -20,6 +20,7 @@
         <li><a href="#">Link</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-danger' %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
@@ -29,9 +30,10 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
+        <% else %>
+        <li><%= link_to "Sign In", new_user_session_path %> </li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-<% end %>

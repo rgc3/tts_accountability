@@ -4,5 +4,4 @@ class GoalsController < ApplicationController
 
   def individual
   end
-
 end
