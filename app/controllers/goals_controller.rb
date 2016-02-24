@@ -1,12 +1,6 @@
+<<<<<<< HEAD:app/controllers/goals_controller.rb
 class GoalsController < ApplicationController
    before_action :set_tweet, only: [:show, :edit, :update, :destroy]
-  def index
-    @goals = Goal.all
-  end
-  
-
-  def show
-  end
 
   def new
     @goal = Goal.new
