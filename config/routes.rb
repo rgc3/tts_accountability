@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'goal/index'
+  get 'goals/index'
 
-  root 'goal#individual'
-
+  root 'goals#individual'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
