@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  get 'profiles/index'
-
-  get 'profiles/show'
-
   devise_for :users
   resources :relationships
   resources :goals
 
-  get 'goals/index'
+  get "profiles" => "profiles#index"
 
+  get 'profiles/show'
+
+  get 'goals' => 'goals#index'
 
   root 'goals#individual'
 

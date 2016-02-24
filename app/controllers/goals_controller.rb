@@ -1,13 +1,13 @@
 class GoalsController < ApplicationController
   before_action :set_goal, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  
-   def index
+
+  def index
     @goals = Goal.all
   end
 
   def show
-    
+
   end
 
 
@@ -23,7 +23,7 @@ class GoalsController < ApplicationController
 
     respond_to do |format|
       if @goal.save
-       
+
         format.html { redirect_to root_path, notice: 'You set a new goal. Good for you' }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class GoalsController < ApplicationController
     end
     end
 
- 
+
 
   private
 
@@ -55,4 +55,3 @@ class GoalsController < ApplicationController
   end
 
 end
-
