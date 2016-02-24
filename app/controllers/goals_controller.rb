@@ -9,7 +9,7 @@ class GoalsController < ApplicationController
   def show
     
   end
-<<<<<<< HEAD
+
 
   def new
     @goal = Goal.new
@@ -23,7 +23,7 @@ class GoalsController < ApplicationController
 
     respond_to do |format|
       if @goal.save
-        # format.html { redirect_to @tweet, notice: 'You have successfully wasted your life.' }
+       
         format.html { redirect_to root_path, notice: 'You set a new goal. Good for you' }
       else
         format.html { render :new }
@@ -33,8 +33,8 @@ class GoalsController < ApplicationController
 
     def update
     respond_to do |format|
-        if @goal.update(tweet_params)
-          format.html { redirect_to @tweet, notice: 'You have modified your goal.' }
+        if @goal.update(goal_params)
+          format.html { redirect_to @goal, notice: 'You have modified your goal.' }
       else
         format.html { render :edit }
 
@@ -42,23 +42,17 @@ class GoalsController < ApplicationController
     end
     end
 
-  def destroy
-      @tweet.destroy
-    respond_to do |format|
-      format.html { redirect_to tweets_url, notice: 'Your tweet is in the garbage where it belongs.' }
-    end
-  end
+ 
 
   private
 
-  def set_tweet
-    @tweet = Tweet.find(params[:id])
+  def set_goal
+    @goal = Goal.find(params[:id])
   end
 
-  def tweet_params
-    params.require(:tweet).permit(:message, :user_id, :avatar)
+  def goal_params
+    params.require(:goal).permit(:description, :user_id, :name, :avatar)
   end
-=======
->>>>>>> 081d3f5ecb1728bc9b5eb979671f6f2aeafd2f31
+
 end
 
