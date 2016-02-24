@@ -9,6 +9,7 @@ class GoalsController < ApplicationController
   def show
     
   end
+<<<<<<< HEAD
 
   def new
     @goal = Goal.new
@@ -57,5 +58,7 @@ class GoalsController < ApplicationController
   def tweet_params
     params.require(:tweet).permit(:message, :user_id, :avatar)
   end
+=======
+>>>>>>> 081d3f5ecb1728bc9b5eb979671f6f2aeafd2f31
 end
 
