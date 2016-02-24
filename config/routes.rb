@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :relationships
+  resources :goals
 
   get 'goals/index'
 
