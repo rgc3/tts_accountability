@@ -6,21 +6,21 @@
           <%= image_tag(@user.avatar.url(:thumb)) %>
               <h3><%= @user.name %></h3>
 
-      </div>
-       <!-- <div class="row">
+      <!-- </div>
+        <div class="row">
          <div class="col-xs-4">
            <span class="small text">TWEETS</span><br />
-                <%= @user.tweets.count %>
+                <#%= @user.tweets.count %>
           </div>
            <div class="col-xs-4">
              <span class="small text">FOLLOWING</span><br />
-              <%= @user.relationships.count %>
+              <#%= @user.relationships.count %>
                   </div>
                   <div class="col-xs-4">
              <span class="small text">FOLLOWERS</span><br />
-              <%= @user.inverse_relationships.count %>
+              <#%= @user.inverse_relationships.count %>
                   </div>
-         </div> -->
+         </div>  -->
 
 
         <h5><p><%= @user.bio %></p></h5>
@@ -29,41 +29,41 @@
 
         <br />
         <br />
-        <!-- <% if current_user.id != @user.id %>
-          <% if current_user.friends.include?(@user) %>
-           <%= link_to "Following", relationship_path(current_user.relationships.find_by_friend_id(@user)), :method => :delete, class: "btn btn-primary", id:"unfollow-btn" %>
-          <% else %>
-            <%= link_to "Follow", relationships_path(:friend_id => @user), method: :post, class: 'btn btn-success' %>
-          <% end %>
-        <% end %> -->
+        <!-- <#% if current_user.id != @user.id %>
+          <#% if current_user.friends.include?(@user) %>
+           <#%= link_to "Following", relationship_path(current_user.relationships.find_by_friend_id(@user)), :method => :delete, class: "btn btn-primary", id:"unfollow-btn" %>
+          <#% else %>
+            <#%= link_to "Follow", relationships_path(:friend_id => @user), method: :post, class: 'btn btn-success' %>
+          <#% end %>
+        <#% end %> -->
       </div>
     </div>
     <div class= "col-xs-1"></div>
 
   <!-- <div class= "col-xs-7 panel panel-default">
-      <% @user.tweets.each do |tweet| %>
+      <#% @user.tweets.each do |tweet| %>
         <div class="panel-body">
-          <%= image_tag(tweet.user.avatar.url(:thumb)) %>
-        <strong><%= tweet.user.username %> </strong><small>tweeted <%= time_ago_in_words(tweet.created_at) %> ago</small>
+          <#%= image_tag(tweet.user.avatar.url(:thumb)) %>
+        <strong><#%= tweet.user.username %> </strong><small>tweeted <#%= time_ago_in_words(tweet.created_at) %> ago</small>
         <br />
         <br />
-        <%= tweet.message %>
+        <#%= tweet.message %>
         </div>
         <div class="panel-body">
 
-        <% if current_user.likes?(tweet) %>
-          <%= link_to tweet_like_path(tweet), method: :delete do %>
+        <#% if current_user.likes?(tweet) %>
+          <#%= link_to tweet_like_path(tweet), method: :delete do %>
             <i id ="change" class="glyphicon glyphicon-heart"></i>
-          <%end%>
-         <% else %>
-          <%= link_to tweet_like_path(tweet), method: :post do %>
+          <#%end%>
+         <#% else %>
+          <#%= link_to tweet_like_path(tweet), method: :post do %>
             <i class="glyphicon glyphicon-heart-empty"></i>
-          <%end%>
-        <% end %>
+          <#%end%>
+        <#% end %>
         <br />
         <hr>
         </div>
-      <% end %>
+      <#% end %>
     </div> -->
   </div>
 
