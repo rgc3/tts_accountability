@@ -2,5 +2,6 @@
 <h3>This is the user's personal goals page.</h3>
 <p>A user is routed to this page after signing in. It contains the user's goals and completed goals, a new goal form, messages and whatever else we think should go here.</p>
 
+<%= image_tag(current_user.avatar.url(:medium)) %>
 <%= current_user.name %>
 <h3>Username: <%= current_user.username %></h3>

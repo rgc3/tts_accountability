@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
   has_many :goals
   has_many :relationships
   has_many :friends, through: :relationships
+  validates :username, presence: true, uniqueness: true
 end
