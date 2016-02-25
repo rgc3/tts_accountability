@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20160225124944) do
+ActiveRecord::Schema.define(version: 20160225125010) do
 
   create_table "goals", force: :cascade do |t|
     t.string   "name"
@@ -47,7 +46,6 @@ ActiveRecord::Schema.define(version: 20160225124944) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.date     "birthday"
-    t.text     "bio"
     t.string   "username"
     t.string   "location"
     t.string   "avatar_file_name"
