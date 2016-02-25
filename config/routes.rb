@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   resources :relationships
   resources :goals
 
-  get 'goals/index'
+  get "profiles" => "profiles#index"
 
+  get 'profiles/show'
+
+  get 'goals' => 'goals#index'
 
   root 'goals#individual'
 
