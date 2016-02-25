@@ -4,8 +4,8 @@
       <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being set:</h2>
 
       <ul>
-        <% @goal.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <% @goal.errors.full_messages.each do |description| %>
+        <li><%= description %></li>
       <% end %>
       </ul>
     </div>
