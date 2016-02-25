@@ -23,7 +23,7 @@ class GoalsController < ApplicationController
     respond_to do |format|
       if @goal.save
 
-        format.html { redirect_to root_path, notice: 'You set a new goal. Good for you' }
+        format.html { redirect_to @goal, notice: 'You set a new goal. Good for you' }
       else
         format.html { render :new }
       end
