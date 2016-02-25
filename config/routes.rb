@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   resources :relationships
   resources :goals
 
-  get "profiles" => "profiles#index"
+  get 'profiles/:id' => 'profiles#show', as: :profile
 
-  get 'profiles/show'
+  get 'profiles' => 'profiles#index'
 
   get 'goals' => 'goals#index'
 

@@ -1,6 +1,6 @@
+
 class GoalsController < ApplicationController
   before_action :set_goal, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
 
   def index
     @goals = Goal.all
@@ -8,7 +8,6 @@ class GoalsController < ApplicationController
 
   def show
   end
-
 
   def new
     @goal = Goal.new
@@ -30,18 +29,16 @@ class GoalsController < ApplicationController
     end
   end
 
-    def update
+  def update
     respond_to do |format|
-        if @goal.update(goal_params)
-          format.html { redirect_to @goal, notice: 'You have modified your goal.' }
+      if @goal.update(goal_params)
+        format.html { redirect_to @goal, notice: 'You have modified your goal.' }
       else
         format.html { render :edit }
 
-        end
+      end
     end
-    end
-
-
+  end
 
   private
 
@@ -50,7 +47,6 @@ class GoalsController < ApplicationController
   end
 
   def goal_params
-    params.require(:goal).permit(:description, :user_id, :name, :avatar)
+    params.require(:goal).permit(:name, :user_id, :avatar, :description)
   end
-
 end
