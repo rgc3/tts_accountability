@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'profiles/show'
 
-   get 'goals' => 'goals#index'
+  get 'goals' => 'goals#index'
   
  
 
