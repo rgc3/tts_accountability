@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'profiles/show'
 
   get 'goals' => 'goals#index'
+  
+ 
 
   root 'goals#individual'
 
