@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160225163350) do
+=======
+ActiveRecord::Schema.define(version: 20160225125010) do
+>>>>>>> 9d9d8e475f176df53d86baa05b80e29e38b91264
 
   create_table "goals", force: :cascade do |t|
     t.string   "name"
@@ -48,7 +52,10 @@ ActiveRecord::Schema.define(version: 20160225163350) do
     t.date     "birthday"
     t.string   "username"
     t.string   "location"
+<<<<<<< HEAD
     t.text     "bio"
+=======
+>>>>>>> 9d9d8e475f176df53d86baa05b80e29e38b91264
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
