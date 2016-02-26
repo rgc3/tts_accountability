@@ -3,15 +3,16 @@ Rails.application.routes.draw do
   resources :relationships
   resources :goals
 
-  get "profiles" => "profiles#index"
-
-  get 'profiles/show'
-
-  get 'goals' => 'goals#index'
+  get "profiles/:id" => "profiles#show", as: :profile
   
- 
+  get 'profiles' => 'profiles#index'
 
-  root 'goals#individual'
+ 
+  get 'goals' => 'goals#index'
+
+ 
+  #root 'profiles#feed'
+   root 'goals#individual'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,3 +1,18 @@
 <h1>Profile Page other users see</h1>
 <h3>This is the page another user will see when looking up your profile.</h3>
 <p>Here user's will see your bio, current goals, goals completed and your accountability partners. They will also be able to send you messages from this page.</p>
+  
+ 
+ 
+  <%# image_tag(@user.avatar.url(:thumb)) %>
+  <%# @user.bio %>
+        <%# @user.location %>
+        
+  <% @user.goals.each do |goal| %>
+  <%= goal.description %> <br />
+<% end %>
+
+<h3><%= @user.name %></h3>
+
+<h5><p><%= @user.bio %></p></h5>
+<h5><%= @user.location %></h5>

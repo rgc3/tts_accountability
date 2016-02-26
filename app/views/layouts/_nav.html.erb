@@ -21,7 +21,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-         <li><%= link_to 'New Goal', new_goal_path %></li
+         <li><%= link_to 'New Goal', new_goal_path %></li>
+          
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-danger' %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
