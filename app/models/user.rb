@@ -11,5 +11,7 @@ class User < ActiveRecord::Base
   has_many :goals
   has_many :relationships
   has_many :friends, through: :relationships
-  validates :username, presence: true, uniqueness: true
+  has_many :inverse_relationships, :class_name => "Relationship", :foreign_key => "friend_id"
+  has_many :inverse_friends, :through => :inverse_relationships, :source => :user
+
 end

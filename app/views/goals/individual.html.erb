@@ -1,7 +1,63 @@
 <h1>Individual Goals Page</h1>
-<h3>This is the user's personal goals page.</h3>
-<p>A user is routed to this page after signing in. It contains the user's goals and completed goals, a new goal form, messages and whatever else we think should go here.</p>
 
-<%= image_tag(current_user.avatar.url(:medium)) %>
-<%= current_user.name %>
-<h3>Username: <%= current_user.username %></h3>
+<!-- - - - - - User personal and account info - - - - - -->
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= image_tag(current_user.avatar.url(:thumb)) %>
+    <%= current_user.name %>
+    <h3>Username: <%= current_user.username %></h3>
+    <P><%= current_user.goals.count %> Goals</P>
+  </div>
+</div>
+
+<div class="row">
+
+<!-- Left Column -->
+  <div class="col-md-6">
+<!-- - - - - - - - - - - User Goals - - - - - - - - - -->
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        User Goals
+      </div>
+    </div>
+
+<!-- - - - - - - - - Completed Goals - - - - - - - - -->
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        Completed Goals
+      </div>
+    </div>
+
+  </div> <!-- Left Column End -->
+
+<!-- Right Column -->
+  <div class="col-md-6">
+
+<!-- - - - - - - - - - New Goals Form - - - - - - - - - -->
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        New Goals Form
+      </div>
+    </div>
+<!-- - - - - - - - - - - Messages - - - - - - - - - - -->
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        Messages
+      </div>
+    </div>
+
+<!-- - - - - - - - - - - - Friends - - - - - - - - - - - -->
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        Friends
+      </div>
+    </div>
+
+  </div> <!-- Right Column End -->
+</div>
