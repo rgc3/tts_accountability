@@ -4,10 +4,16 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
-    <%= image_tag(current_user.avatar.url(:thumb)) %>
-    <%= current_user.name %>
-    <h3>Username: <%= current_user.username %></h3>
-    <P><%= current_user.goals.count %> Goals</P>
+    <div class="row">
+      <div class="col-md-6">
+        <%= image_tag(current_user.avatar.url(:thumb)) %><br />
+        <%= current_user.username %><br />
+      </div>
+      <div class="col-md-6">
+        <%= current_user.name %>
+        <P><%= current_user.goals.count %> Goals</P>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -45,11 +51,11 @@
     </div>
 <!-- - - - - - - - - - - Messages - - - - - - - - - - -->
 
-    <div class="panel panel-default">
+    <!-- <div class="panel panel-default">
       <div class="panel-body">
         Messages
       </div>
-    </div>
+    </div> -->
 
 <!-- - - - - - - - - - - - Friends - - - - - - - - - - - -->
 
